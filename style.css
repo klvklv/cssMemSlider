@@ -131,52 +131,30 @@ body {
 	border: 0.2em solid #EBD2CD;
 }
 
-@keyframes fade1{
+@keyframes fade{
 	0% {opacity:0; }
-	100% {opacity:1; margin-left: 0%;}
-}
-@keyframes fade2 {
-	0% {opacity:0;}
-	100% {opacity:1; margin-left: -20%;}
-}
-@keyframes fade3 {
-	0% {opacity:0;}
-	100% {opacity:1; margin-left: -40%;}
-}
-@keyframes fade4 {
-	0% {opacity:0;}
-	100% {opacity:1; margin-left: -60%;}
+	100% {opacity:1;}
 }
 
-#slide1 ~ .slider-items .item:nth-child(1) {
-	/* margin-left: 0%; */
-	animation-name: fade1;
-	animation-duration: 3s;
-	animation-fill-mode: both;
-}
 #slide1:target ~ .slider-items .item:nth-child(1) {
-	/* margin-left: 0%; */
-	animation-name: fade1;
+	margin-left: 0%;
+	animation-name: fade;
 	animation-duration: 3s;
-	animation-fill-mode: both;
 }
 #slide2:target ~ .slider-items .item:nth-child(2) {
-	/* margin-left: -20%; */
-	animation-name: fade2;
+	margin-left: -20%;
+	animation-name: fade;
 	animation-duration: 3s;
-	animation-fill-mode: both;
 }
 #slide3:target ~ .slider-items .item:nth-child(3) {
-	/* margin-left: -40%; */
-	animation-name: fade3;
+	margin-left: -40%;
+	animation-name: fade;
 	animation-duration: 3s;
-	animation-fill-mode: both;
 }
 #slide4:target ~ .slider-items .item:nth-child(4) {
-	/* margin-left: -60%; */
-	animation-name: fade4;
+	margin-left: -60%;
+	animation-name: fade;
 	animation-duration: 3s;
-	animation-fill-mode: both;
 }
 
 .slide-footer {
