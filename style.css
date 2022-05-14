@@ -131,30 +131,52 @@ body {
 	border: 0.2em solid #EBD2CD;
 }
 
-@keyframes fade {
+@keyframes fade1{
+	0% {opacity:0; }
+	100% {opacity:1; margin-left: 0%;}
+}
+@keyframes fade2 {
 	0% {opacity:0;}
-	100% {opacity:1;}
+	100% {opacity:1; margin-left: -20%;}
+}
+@keyframes fade3 {
+	0% {opacity:0;}
+	100% {opacity:1; margin-left: -40%;}
+}
+@keyframes fade4 {
+	0% {opacity:0;}
+	100% {opacity:1; margin-left: -60%;}
 }
 
-#slide1:target ~ .slider-items .item:nth-child(1) {
-	margin-left: 0%;
-	animation-name: fade;
+#slide1 ~ .slider-items .item:nth-child(1) {
+	/* margin-left: 0%; */
+	animation-name: fade1;
 	animation-duration: 3s;
+	animation-fill-mode: both;
+}
+#slide1:target ~ .slider-items .item:nth-child(1) {
+	/* margin-left: 0%; */
+	animation-name: fade1;
+	animation-duration: 3s;
+	animation-fill-mode: both;
 }
 #slide2:target ~ .slider-items .item:nth-child(2) {
-	margin-left: -20%;
-	animation-name: fade;
+	/* margin-left: -20%; */
+	animation-name: fade2;
 	animation-duration: 3s;
+	animation-fill-mode: both;
 }
 #slide3:target ~ .slider-items .item:nth-child(3) {
-	margin-left: -40%;
-	animation-name: fade;
+	/* margin-left: -40%; */
+	animation-name: fade3;
 	animation-duration: 3s;
+	animation-fill-mode: both;
 }
 #slide4:target ~ .slider-items .item:nth-child(4) {
-	margin-left: -60%;
-	animation-name: fade;
+	/* margin-left: -60%; */
+	animation-name: fade4;
 	animation-duration: 3s;
+	animation-fill-mode: both;
 }
 
 .slide-footer {
@@ -208,22 +230,22 @@ body {
 #slide1:target ~ .slide-footer .sld-text .text:nth-child(1) {
 	animation-name: transparent;
 	animation-duration: 3s;
-	animation-timing-function: linear;
+	animation-fill-mode: forwards;
 }
 #slide2:target ~ .slide-footer .sld-text .text:nth-child(2) {
 	animation-name: transparent;
 	animation-duration: 3s;
-	animation-timing-function: linear;
+	animation-fill-mode: both;
 }
 #slide3:target ~ .slide-footer .sld-text .text:nth-child(3) {
 	animation-name: transparent;
 	animation-duration: 3s;
-	animation-timing-function: linear;
+	animation-fill-mode: both;
 }
 #slide4:target ~ .slide-footer .sld-text .text:nth-child(4){
 	animation-name: transparent;
 	animation-duration: 3s;
-	animation-timing-function: linear;
+	animation-fill-mode: both;
 }
 
 .slide-menu {
@@ -348,5 +370,12 @@ a:last-child {
 	}
 	#slide4:target ~ .slide-footer .sld-text  {
 		margin-top: -15rem;
+	}
+}
+
+@media (max-width: 425px) {
+
+	.text {
+		font-size: 1.2rem;
 	}
 }
